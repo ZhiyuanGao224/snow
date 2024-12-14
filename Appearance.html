@@ -1,0 +1,61 @@
+!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>SnowKang - Interest</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="Appearance style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&family=Open+Sans&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        
+        <h1>SnowKang</h1>
+       
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="interest.html" class="active">Interest</a></li>
+                <li><a href="Appearance.html">Appearance</a></li>
+                <li><a href="background.html">Background</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section id="interest" class="news">
+            <h2>My Appearance</h2>
+            <p>These are My Daily photoes!</p>
+        </section>
+
+        <section id="interests-gallery" class="love">
+            <div class="interest-item">
+                <img src="images/tianjin.jpeg"" alt="appearance 1">
+                <h3>I am a thinker</h3>
+                <p>Silent Snow</p>
+            </div>
+            <div class="interest-item">
+                <img src="images/ap 2.png" alt="appearance 2">
+                <h3>I am acting cute</h3>
+                <p>Cute Snow</p>
+            </div>
+            
+            <div class="interest-item">
+                <img src="images/snow drinking.JPG" alt="appearance 3">
+                <h3>I love Alcohol</h3>
+                <p> Drunk Snow</p>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; <span id="year"></span> SnowKang. All rights reserved.</p>
+    </footer>
+
+    <script>
+        
+        document.getElementById('year').textContent = new Date().getFullYear();
+    </script>
+</body>
+</html>

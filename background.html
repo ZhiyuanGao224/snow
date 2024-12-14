@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>SnowKang - Background</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- External CSS File -->
+    <link rel="stylesheet" href="BG style.css">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&family=Open+Sans&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <h1>SnowKang</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="interest.html">Interest</a></li>
+                <li><a href="Appearance.html">Appearance</a></li>
+                <li><a href="background.html">Background</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <!-- First Section -->
+        <section class="background-section" id="early-life">
+            <h2>Wow</h2>
+            <p>Magical Snow.</p>
+            <img src="images/BGimage1.PNG" alt="Magical Snow" loading="lazy">
+        </section>
+
+        <!-- Third Section -->
+        <section class="background-section" id="career">
+            <h2>Emmm</h2>
+            <p>Jack's counterattack.</p>
+            <img src="images/BGimage3.PNG" alt="Snow's achievements" loading="lazy">
+            
+            <!-- Interactive Button -->
+            <button id="achievement-button" aria-controls="achievement-list" aria-expanded="false">See Achievements</button>
+            
+            <!-- Achievement List, initially hidden -->
+            <ul id="achievement-list" style="display: none;">
+                <li>Awarded 'Girfriend of the Year' in 2024</li>
+                <li>Build a strong relationship with Jack</li>
+                <li>Founded a non-profit organization with Jack</li>
+            </ul>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; <span id="year"></span> Jack.</p>
+    </footer>
+
+    <!-- JavaScript Script -->
+    <script>
+        // Dynamic display of current year
+        document.getElementById('year').textContent = new Date().getFullYear();
+
+        // Achievement button interaction
+        document.getElementById('achievement-button').addEventListener('click', function() {
+            const list = document.getElementById('achievement-list');
+            const isHidden = list.style.display === 'none';
+
+            list.style.display = isHidden ? 'block' : 'none';
+            this.textContent = isHidden ? 'Hide Achievements' : 'See Achievements';
+            this.setAttribute('aria-expanded', isHidden);
+        });
+    </script>
+</body>
+</html>

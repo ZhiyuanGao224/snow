@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>SnowKang - A Beautiful Girl</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <link rel="stylesheet" href="styles.css">
+    
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&family=Open+Sans&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <h1>SnowKang</h1>
+        <nav>
+            <ul>
+                <li><a href="interest.html">Interest</a></li>
+                <li><a href="Appearance.html">Appearance</a></li>
+                <li><a href="background.html">Background</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <!-- Interest Section -->
+        <section id="interest" class="news">
+            <h2>This is Snow!</h2>
+            <p><em>A Beautiful Girl</em></p>
+            <p><a href="https://www.google.com/" class="button-link"><em>Learn More</em></a></p>
+        </section>
+
+        <!-- Appearance Section -->
+        <section id="appearance" class="slogan">
+            <blockquote>
+                <p>The Snow Whispers Secrets Only the Quiet Can Hear</p>
+                <p>Blanketing the World In Peace</p>
+            </blockquote>
+            <div class="love">
+                <div>
+                    <img src="images/flower.jpeg" alt="Delicate Flower">
+                    <h3>Like a delicate flower in full bloom, her elegance and charm captivate every soul that beholds her.</h3>
+                    <p>A flower's beauty pales before hers.</p>
+                </div>
+                <div>
+                    <img src="images/dinner.jpeg" alt="Gentle Smile">
+                    <h3>Beneath her gentle smile lies a heart so pure and kind, it radiates warmth and compassion to everyone she meets.</h3>
+                    <p>Her soul shines brighter than the stars.</p>
+                </div>
+                <div>
+                    <img src="images/grass.jpeg" alt="Timeless Beauty">
+                    <h3>She possesses a timeless beauty that seems to blend the elegance of nature with the grace of a fleeting dream.</h3>
+                    <p>Her beauty is simply breathtaking.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Birthday Section -->
+        <section id="birthday" class="photo">
+            <div class="info">
+                <h2>When is her Birthday?</h2>
+                <p>Let me see!<br>
+                <span id="birthday-message">It's on December 12!</span><br>
+                Let's celebrate!</p>
+                <button onclick="alert('Happy Birthday, Snow!')">Celebrate</button>
+            </div>
+        </section>
+
+        <!-- Background Section -->
+        <section id="background" class="newsletter">
+            <p>Keep In Touch!</p>
+            <form>
+                <input type="email" placeholder="Your Email" required>
+                <button type="submit">Send</button>
+            </form>
+        </section>
+
+        <!-- Testimonials Section -->
+        <section id="interactions" class="testimonials">
+            <h2>Testimonials</h2>
+            <p>"Snow is incredibly talented, always bringing warmth and beauty into our projects." - A Friend</p>
+            <p>"Her dedication and positivity are contagious!" - Colleague</p>
+        </section>
+
+        <!-- Gallery Section -->
+        <section id="gallery" class="love">
+            <div class="gallery-item">
+                <a href="#">
+                    <img src="images/IMG_2577.JPG" alt="On the beach">
+                    <div class="gallery-overlay">
+                        <h3>I was travelling</h3>
+                        <p>My Favorit Place!</p>
+                    </div>
+                </a>
+            </div>
+            <div class="gallery-item">
+                <a href="#">
+                    <img src="images/host.JPG" alt="Hi, I am hostess!">
+                    <div class="gallery-overlay">
+                        <h3>I was hosting!</h3>
+                        <p>My Outstanding Ability!</p>
+                    </div>
+                </a>
+            </div>
+            <div class="gallery-item">
+                <a href="#">
+                    <img src="images/road.JPG" alt="On the road">
+                    <div class="gallery-overlay">
+                        <h3>I was enjoying Xiamen</h3>
+                        <p>Freedom!</p>
+                    </div>
+                </a>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact" class="contact">
+            <h2>Contact Me</h2>
+            <form>
+                <input type="text" placeholder="Your Name" required>
+                <input type="email" placeholder="Your Email" required>
+                <textarea placeholder="Your Message" required></textarea>
+                <button type="submit">Send Message</button>
+            </form>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; <span id="year"></span> Jack.</p>
+    </footer>
+
+    <script>
+        document.querySelector('.menu').addEventListener('click', function() {
+            const nav = document.querySelector('header nav ul');
+            nav.classList.toggle('show');
+        });
+
+       
+        document.getElementById('year').textContent = new Date().getFullYear();
+
+        (function() {
+            const birthday = new Date(new Date().getFullYear(), 11, 12); // 12月12日
+            const today = new Date();
+            const messageElement = document.getElementById('birthday-message');
+            if (today.getMonth() === birthday.getMonth() && today.getDate() === birthday.getDate()) {
+                messageElement.textContent = "It's today, December 12!";
+            } else {
+                messageElement.textContent = "It's on December 12!";
+            }
+        })();
+    </script>
+</body>
+</html>

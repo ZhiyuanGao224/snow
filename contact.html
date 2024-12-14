@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Snow</title>
+    <link rel="stylesheet" href="contact style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&family=Open+Sans&display=swap" rel="stylesheet">
+    <style>
+        /* Add some styling for the map container */
+        .map-container {
+            margin-top: 20px;
+            width: 100%;
+            max-width: 600px;
+            height: auto;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        .map-container img {
+            width: 100%;
+            height: auto;
+            max-width: 800px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            display: block;
+            margin: 0 auto;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Contact SnowKang</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="interest.html">Interest</a></li>
+                <li><a href="Appearance.html">Appearance</a></li>
+                <li><a href="background.html">Background</a></li>
+                <li><a href="contact.html" class="active">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section id="contact-section" class="contact">
+            <h2>Get in Touch</h2>
+            <p>If you have any questions, comments, or just want to say hello.</p>
+            <p>Feel free to send a message. I'd love to hear from you!</p>
+            
+            <!-- New Interactive Map Section -->
+            <div class="map-container">
+    <h3>Find Me Here</h3>
+    <img src="images/map.png" alt="Our Location" class="map-image">
+</div>
+            
+            <form action="" method="post" onsubmit="handleFormSubmit(event)">
+                <div class="form-group">
+                    <input type="text" id="name" name="name" placeholder="Your Name" required>
+                </div>
+                <div class="form-group">
+                    <input type="email" id="email" name="email" placeholder="Your Email" required>
+                </div>
+                <div class="form-group">
+                    <textarea id="message" name="message" placeholder="Your Message" required></textarea>
+                </div>
+                <button type="submit">Send Message</button>
+            </form>
+            <div id="form-feedback" class="form-feedback"></div>
+
+            <!-- Contact Details Section -->
+            <div class="contact-details">
+                <p>Email: contact@snowkang.com</p>
+                <p>Phone: +1 234 567 890</p>
+                <p>Address: 480 11th, VA</p>
+            </div>
+
+            <!-- New Social Media Links Section -->
+            <div class="social-media">
+                <h3>Follow Me</h3>
+                <ul>
+                    <li><a href="https://www.linkedin.com/in/sinuo-kang-739318340/" target="_blank">linkedin.com/in/sinuo-kang-739318340</a></li>
+                </ul>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; <span id="year"></span> Jack. All rights reserved.</p>
+    </footer>
+
+    <script>
+        // Set current year in footer
+        document.getElementById('year').textContent = new Date().getFullYear();
+
+        // Handle form submission
+        function handleFormSubmit(event) {
+            event.preventDefault();
+            const name = document.getElementById('name').value;
+            const email = document.getElementById('email').value;
+            const message = document.getElementById('message').value;
+            const feedbackElement = document.getElementById('form-feedback');
+
+            // Simulate form submission
+            feedbackElement.innerHTML = `<p>Thank you, ${name}! Your message has been sent successfully. We will get back to you at ${email} soon.</p>`;
+            feedbackElement.style.display = 'block';
+
+            // Clear the form
+            document.getElementById('name').value = '';
+            document.getElementById('email').value = '';
+            document.getElementById('message').value = '';
+        }
+    </script>
+</body>
+</html>
+

@@ -1,0 +1,243 @@
+/* General Reset */
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+/* General styles for the entire page */
+body {
+    font-family: 'Montserrat', sans-serif;
+    background-image: url('images/Undergrad headspace.jpeg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    color: #ffffff;
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+    transition: background-color 0.3s ease;
+}
+
+
+/* Header Styling */
+header {
+    background-color: rgba(25, 25, 25, 0.9);
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    box-shadow: 0 2px 15px rgba(0, 0, 0, 0.7);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: background-color 0.5s ease;
+    padding: 20px;
+}
+
+header:hover {
+    background-color: rgba(0, 0, 0, 0.95);
+}
+
+header h1 {
+    font-family: 'Montserrat', sans-serif;
+    color: #ffffff;
+    font-size: 28px;
+}
+
+header ul {
+    display: flex;
+    gap: 20px;
+    margin-right: 20px;
+}
+
+header li {
+    list-style: none;
+}
+
+header a {
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: 600;
+    transition: color 0.3s ease, border-bottom 0.3s ease;
+    position: relative;
+}
+
+header a::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -3px;
+    width: 0;
+    height: 2px;
+    background-color: #ff6347;
+    transition: width 0.3s ease;
+}
+
+header a:hover {
+    color: #ff6347;
+}
+
+header a:hover::after {
+    width: 100%;
+}
+
+/* Interest Section */
+.news {
+    background-color: rgba(31, 41, 51, 0.8);
+    color: #ffffff;
+    height: 60vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding-top: 100px;
+    animation: fadeIn 2s ease-in-out;
+}
+
+.news h2 {
+    font-size: 56px;
+    font-family: 'Montserrat', sans-serif;
+    margin-bottom: 20px;
+}
+
+.news p {
+    font-size: 22px;
+    font-family: 'Open Sans', sans-serif;
+    margin-bottom: 20px;
+}
+
+/* Interests Gallery Section */
+#interests-gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 40px;
+    padding: 60px 20px;
+    background-color: rgba(244, 244, 244, 0.9);
+    justify-content: center;
+    border-radius: 15px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+}
+
+.interest-item {
+    text-align: center;
+    padding: 20px;
+    background-color: #ffffff;
+    border-radius: 15px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    cursor: pointer;
+}
+
+.interest-item:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
+}
+
+.interest-item img {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+    border-radius: 10px;
+    transition: transform 0.3s ease;
+}
+
+.interest-item:hover img {
+    transform: scale(1.05);
+}
+
+.interest-item h3 {
+    font-size: 28px;
+    margin: 15px 0;
+    font-family: 'Montserrat', sans-serif;
+    color: #333;
+}
+
+.interest-item p {
+    font-size: 18px;
+    line-height: 1.6em;
+    font-family: 'Open Sans', sans-serif;
+    color: #555;
+}
+
+/* Button Style for Interactive Feel */
+button, .menu {
+    background-color: #ff6347;
+    color: #ffffff;
+    border: none;
+    padding: 10px 20px;
+    font-size: 18px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    border-radius: 5px;
+    font-family: 'Montserrat', sans-serif;
+}
+
+button:hover, .menu:hover {
+    background-color: #e5533d;
+    transform: scale(1.05);
+}
+
+/* Footer Styles */
+footer {
+    background-color: rgba(34, 40, 49, 0.9);
+    color: #dcdcdc;
+    text-align: center;
+    padding: 20px 0;
+    margin-top: 40px;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 16px;
+}
+
+/* Responsive styling for smaller screens */
+@media screen and (max-width: 768px) {
+    header {
+        width: 100%;
+        height: auto;
+        position: fixed;
+        bottom: 0;
+        top: unset;
+        flex-direction: row;
+        justify-content: space-around;
+        padding: 10px;
+    }
+
+    header ul {
+        flex-direction: row;
+        gap: 10px;
+    }
+
+    #interests-gallery {
+        grid-template-columns: 1fr;
+    }
+
+    .interest-item {
+        width: 100%;
+        margin-bottom: 20px;
+    }
+}
+
+/* Animations for Interactive Feel */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes float {
+    0% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-10px);
+    }
+    100% {
+        transform: translateY(0);
+    }
+}

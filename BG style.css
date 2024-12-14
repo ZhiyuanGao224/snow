@@ -1,0 +1,215 @@
+/* General Reset */
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+/* General styles for the entire page */
+body {
+    font-family: 'Montserrat', sans-serif;
+    background-image: url('images/Undergrad headspace.jpeg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    color: #ffffff;
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+    transition: background-color 0.3s ease;
+    animation: fadeIn 1s ease-in-out;
+}
+
+/* Header Styling */
+header {
+    background-color: rgba(25, 25, 25, 0.9);
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    box-shadow: 0 2px 15px rgba(0, 0, 0, 0.7);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: background-color 0.5s ease;
+    padding: 20px;
+}
+
+header:hover {
+    background-color: rgba(0, 0, 0, 0.95);
+}
+
+header h1 {
+    font-family: 'Montserrat', sans-serif;
+    color: #ffffff;
+    font-size: 28px;
+}
+
+header ul {
+    display: flex;
+    gap: 20px;
+    margin-right: 20px;
+}
+
+header li {
+    list-style: none;
+}
+
+header a {
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: 600;
+    transition: color 0.3s ease, border-bottom 0.3s ease;
+    position: relative;
+}
+
+header a::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -3px;
+    width: 0;
+    height: 2px;
+    background-color: #ff6347;
+    transition: width 0.3s ease;
+}
+
+header a:hover {
+    color: #ff6347;
+}
+
+header a:hover::after {
+    width: 100%;
+}
+
+/* Background Sections */
+.background-section {
+    padding: 100px 20px;
+    margin: 100px 20px 20px;
+    background-color: rgba(255, 255, 255, 0.9);
+    border-radius: 15px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.background-section:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
+}
+
+.background-section h2 {
+    font-size: 32px;
+    font-family: 'Montserrat', sans-serif;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+.background-section p {
+    font-size: 18px;
+    line-height: 1.8;
+    font-family: 'Open Sans', sans-serif;
+    color: #555;
+    margin-bottom: 20px;
+}
+
+.background-section img {
+    width: 100%;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.background-section img:hover {
+    transform: scale(1.05);
+}
+
+/* Button Style for Interactive Feel */
+button, .menu {
+    background-color: #ff6347;
+    color: #ffffff;
+    border: none;
+    padding: 10px 20px;
+    font-size: 18px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    border-radius: 5px;
+    font-family: 'Montserrat', sans-serif;
+}
+
+button:hover, .menu:hover {
+    background-color: #e5533d;
+    transform: scale(1.05);
+}
+
+/* Footer Styles */
+footer {
+    background-color: rgba(34, 40, 49, 0.9);
+    color: #dcdcdc;
+    text-align: center;
+    padding: 20px 0;
+    margin-top: 40px;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 16px;
+}
+
+/* Achievement List Styling */
+#achievement-list {
+    margin-top: 20px;
+    padding-left: 20px;
+    font-family: 'Open Sans', sans-serif;
+    color: #555;
+    list-style-type: disc;
+}
+
+/* Responsive styling for smaller screens */
+@media screen and (max-width: 768px) {
+    header {
+        width: 100%;
+        height: auto;
+        position: fixed;
+        bottom: 0;
+        top: unset;
+        flex-direction: row;
+        justify-content: space-around;
+        padding: 10px;
+    }
+
+    header ul {
+        flex-direction: row;
+        gap: 10px;
+    }
+
+    .background-section {
+        margin: 60px 10px;
+        padding: 40px 20px;
+    }
+
+    button {
+        font-size: 16px;
+        padding: 8px 16px;
+    }
+}
+
+/* Animations for Interactive Feel */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes float {
+    0% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-10px);
+    }
+    100% {
+        transform: translateY(0);
+    }
+}

@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>SnowKang - Interest</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="Interest style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&family=Open+Sans&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        
+        <h1>SnowKang</h1>
+       
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="interest.html" class="active">Interest</a></li>
+                <li><a href="Appearance.html">Appearance</a></li>
+                <li><a href="background.html">Background</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <!-- Interest Section -->
+        <section id="interest" class="news">
+            <h2>I am good at playing tennis and piano</h2>
+            <p>To be honest, I enjoy spending time with Jack!</p>
+        </section>
+
+        <!-- Interests Gallery Section -->
+        <section id="interests-gallery" class="love">
+            <div class="interest-item">
+                <img src="images/us 03.JPG" alt="Interest 1">
+                <h3>I</h3>
+                <p>Este</p>
+            </div>
+            <div class="interest-item">
+                <img src="images/IMG_2578.JPG" alt="Interest 2">
+                <h3>Love</h3>
+                <p>Es</p>
+            </div>
+            
+            <div class="interest-item">
+                <img src="images/interest 3.png" alt="Interest 4">
+                <h3>You</h3>
+                <p> Nosotros</p>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; <span id="year"></span> SnowKang. All rights reserved.</p>
+    </footer>
+
+    <script>
+        
+        document.getElementById('year').textContent = new Date().getFullYear();
+    </script>
+</body>
+</html>
